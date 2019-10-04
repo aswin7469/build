@@ -918,6 +918,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   build_id = target_info.GetBuildProp("ro.build.id")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.pixys.device")
+  edition = target_info.GetBuildProp("ro.pixys.edition")
 
   script.Print("--------------------------------------------");
   script.Print("  ___  ___  _   _ _    _  ____   ___   ___  ");
@@ -931,6 +932,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Security patch: %s"%(security_patch));
   script.Print(" Device: %s"%(device));
+  script.Print(" PixysOS Edition: %s"%(edition));
   script.Print("--------------------------------------------");
 
   device_specific.FullOTA_InstallBegin()
